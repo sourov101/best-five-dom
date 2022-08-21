@@ -1,27 +1,65 @@
-function seletPlayer(elementId, value) {
+function selectPlayer(elementId, value) {
     document.getElementById(elementId).addEventListener('click', function () {
 
         const playerName = document.getElementById(value);
         const playerNameString = playerName.innerText;
 
-        return playerNameString;
+        const selector = document.querySelectorAll('#ordered-list li');
+
+        if (selector.length > 4) {
+            alert("Can't select more than 5");
+            return;
+        }
+
+        const orderedList = document.getElementById('ordered-list');
+        const li = document.createElement('li');
+        li.innerText = playerNameString;
+        orderedList.appendChild(li);
+
+
+
+
     })
 }
 
-function list(playerNameString) {
-    const ol = document.getElementById('ordered-list')
 
-}
-seletPlayer('select-beckham', 'name-beckham');
+const player1 = selectPlayer('select-beckham', 'name-beckham');
 
-seletPlayer('select-cr7', 'name-cr7');
+selectPlayer('select-cr7', 'name-cr7');
 
-seletPlayer('select-messi', 'name-messi');
+selectPlayer('select-messi', 'name-messi');
 
-seletPlayer('select-mbappe', 'name-mbappe');
+selectPlayer('select-mbappe', 'name-mbappe');
 
-seletPlayer('select-zlatan', 'name-Zlatan');
+selectPlayer('select-zlatan', 'name-Zlatan');
 
-seletPlayer('select-neymar', 'name-neymar');
+selectPlayer('select-neymar', 'name-neymar');
 
 
+// document.getElementById('select-beckham').addEventListener('click', function () {
+//     const playerName = document.getElementById('name-beckham').innerText;
+//     console.log(playerName)
+//     const orderedList = document.getElementById('ordered-list');
+//     const li = document.createElement('li');
+//     li.innerText = playerName;
+//     orderedList.appendChild(li);
+//     console.log(li);
+// })
+// document.getElementById('select-cr7').addEventListener('click', function () {
+//     const playerName = document.getElementById('name-cr7').innerText;
+//     console.log(playerName)
+//     const orderedList = document.getElementById('ordered-list');
+//     const li = document.createElement('li');
+//     li.innerText = playerName;
+//     orderedList.appendChild(li);
+//     console.log(li);
+// })
+// document.getElementById('select-messi').addEventListener('click', function () {
+//     const playerName = document.getElementById('name-cr7').innerText;
+//     console.log(playerName)
+//     const orderedList = document.getElementById('ordered-list');
+//     const li = document.createElement('li');
+//     li.innerText = playerName;
+//     orderedList.appendChild(li);
+//     console.log(li);
+// })
