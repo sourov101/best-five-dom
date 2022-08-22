@@ -11,6 +11,7 @@ function selectPlayer(elementId, value) {
             return;
         }
 
+
         const orderedList = document.getElementById('ordered-list');
         const li = document.createElement('li');
         li.innerText = playerNameString;
@@ -22,18 +23,30 @@ function selectPlayer(elementId, value) {
     })
 }
 
+function disable(value) {
+    value.disabled = true;
+    value.style.backgroundColor = 'white';
+    value.style.color = 'black';
+
+}
 
 const player1 = selectPlayer('select-beckham', 'name-beckham');
 
-selectPlayer('select-cr7', 'name-cr7');
+const player2 = selectPlayer('select-cr7', 'name-cr7');
 
-selectPlayer('select-messi', 'name-messi');
+const player3 = selectPlayer('select-messi', 'name-messi');
 
-selectPlayer('select-mbappe', 'name-mbappe');
+const player4 = selectPlayer('select-mbappe', 'name-mbappe');
 
-selectPlayer('select-zlatan', 'name-Zlatan');
+const player5 = selectPlayer('select-zlatan', 'name-Zlatan');
 
-selectPlayer('select-neymar', 'name-neymar');
+const player6 = selectPlayer('select-neymar', 'name-neymar');
+
+const player7 = selectPlayer('select-ronaldinho', 'name-ronaldinho');
+
+const player8 = selectPlayer('select-zidane', 'name-zidane');
+
+const player9 = selectPlayer('select-ozil', 'name-ozil');
 
 
 // document.getElementById('select-beckham').addEventListener('click', function () {
