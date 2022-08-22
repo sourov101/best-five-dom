@@ -3,7 +3,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
     const playerExpense = parseFloat(playerExpenseInput.value);
     const selector = document.querySelectorAll('#ordered-list li');
-    console.log(playerExpense);
+
     const calculate = playerExpense * selector.length;
     const expense = document.getElementById('player-expenses');
     expense.innerText = calculate;
@@ -44,6 +44,7 @@ document.getElementById('calculate-total').addEventListener('click', function ()
 
     const totalValue = document.getElementById('total-value');
     totalValue.innerText = totalCalculation;
+
     if (totalValue.innerText == 'NaN') {
         alert('Please Enter a Number Type veriable');
         return totalValue.innerText = 0;
