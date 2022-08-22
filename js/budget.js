@@ -1,13 +1,22 @@
 document.getElementById('calculate-btn').addEventListener('click', function () {
     const playerExpenseInput = document.getElementById('per-Player-expense');
+
     const playerExpense = parseFloat(playerExpenseInput.value);
     const selector = document.querySelectorAll('#ordered-list li');
-
+    console.log(playerExpense);
     const calculate = playerExpense * selector.length;
     const expense = document.getElementById('player-expenses');
     expense.innerText = calculate;
     playerExpenseInput.value = '';
-    return calculate;
+    if (expense.innerText == "NaN") {
+        alert('Please Enter a Number Type veriable');
+        return expense.innerText = 0;
+    }
+    else {
+        return calculate;
+    }
+
+
 
 })
 
@@ -35,5 +44,9 @@ document.getElementById('calculate-total').addEventListener('click', function ()
 
     const totalValue = document.getElementById('total-value');
     totalValue.innerText = totalCalculation;
+    if (totalValue.innerText == 'NaN') {
+        alert('Please Enter a Number Type veriable');
+        return totalValue.innerText = 0;
+    }
 
 })
